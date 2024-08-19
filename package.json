@@ -1,13 +1,12 @@
 {
-    "name": "cibus_backend",
+    "name": "app-api",
     "version": "1.0.0",
-    "description": "Backend for the Cibus application",
+    "description": "Backend for the Login app",
     "main": "index.ts",
     "license": "ISC",
     "type": "module",
     "scripts": {
-        "start": "tsc && node dist/index.js",
-        "clean": "tsc && node dist/src/utils/clean.js"
+        "start": "tsc && node dist/index.js"
     },
     "dependencies": {
         "body-parser": "^1.20.2",
