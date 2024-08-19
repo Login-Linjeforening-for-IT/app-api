@@ -1,5 +1,4 @@
 # App-api
-## INFT2508 Semester project
 
 ### Project description
 App-api is a minimalistic API created to host app specific content. The service provides the following endpoints: /questions, /neverhaveiever and /okredflagdealbreaker. More content will be added as we see fit.
