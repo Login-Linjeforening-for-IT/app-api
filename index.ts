@@ -9,9 +9,9 @@ const port = 3000
 
 app.use(bodyParser.json())
 
-let questions: Question[] = Questions
-let okredflagdealbreaker: OkRedFlagDealBreaker[] = OkRedFlagDealbreaker
-let neverhaveiever: NeverHaveIEver[] = NeverHaveIEver
+let questions = Questions 
+let okredflagdealbreaker = OkRedFlagDealbreaker
+let neverhaveiever = NeverHaveIEver
 
 // GET endpoint to error message
 app.get('/', (req, res) => {
