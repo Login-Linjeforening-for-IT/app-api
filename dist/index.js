@@ -3,23 +3,31 @@ import bodyParser from "body-parser";
 import Questions from "./src/questions.js";
 import OkRedFlagDealbreaker from "./src/okredflagdealbreaker.js";
 import NeverHaveIEver from "./src/neverhaveiever.js";
+import Games from "./src/games.js";
 const app = express();
 const port = 3000;
 app.use(bodyParser.json());
+let games = Games;
 let questions = Questions;
 let okredflagdealbreaker = OkRedFlagDealbreaker;
 let neverhaveiever = NeverHaveIEver;
 // GET endpoint to error message
 app.get('/', (req, res) => {
-    res.json({ error: "Invalid endpoint. Please use /questions, /okredflagdealbreaker or /neverhaveiever." });
+    res.json({ error: "Invalid endpoint. Please use /games for overview of what games exist." });
+});
+// GET endpoint to retrieve all questions
+app.get('/games', (req, res) => {
+    const Games = JSON.stringify(games);
+    res.header("Content-Type", "application/json");
+    res.send(Games);
 });
 // GET endpoint to retrieve all questions
 app.get('/questions', (req, res) => {
-    const indentedQuestions = JSON.stringify(questions);
+    const Questions = JSON.stringify(questions);
     res.header("Content-Type", "application/json");
-    res.send(indentedQuestions);
+    res.send(Questions);
 });
-// GET endpoint to retrieve all okredflagdealbreaker questions
+// GET endpoint to retrieve all ok, red flag or dealbreaker questions
 app.get('/okredflagdealbreaker', (req, res) => {
     const Okredflagdealbreaker = JSON.stringify(okredflagdealbreaker);
     res.header("Content-Type", "application/json");
