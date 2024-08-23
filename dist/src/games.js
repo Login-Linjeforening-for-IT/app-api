@@ -2,7 +2,7 @@ const Games = [
     {
         id: 0,
         name: "100 Questions",
-        endpoint: "/neverhaveiever",
+        endpoint: "/questions",
         description_no: "Det klassiske 100 spørsmål / snusboks / pekelek spillet.",
         description_en: "The classic 100 questions / snusbox / pointing game."
     },
